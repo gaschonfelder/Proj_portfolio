@@ -1,0 +1,90 @@
+.experiencia{
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+}
+
+.experiencia .subtitulo{
+    color: #e0e0e0;
+    align-self: center;
+}
+.empresa{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 20px;
+    gap: 10px 20px;
+    background: #f5f5f5;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+
+    border: 2px solid var(--c-3, #E6E6E6);
+    background: var(--c-2, #F5F5F5);
+}
+.ano_empresa{
+    position: absolute;
+    top: 22px;
+    left: -100px;
+    color: #525252;
+    text-align: right;
+    font-size: 0.875rem;
+    width: 80px;
+   
+}
+.empresa::before{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 20px;
+    background: linear-gradient(180deg, #0E8E32 0%, #5FB934 100%);
+    position: absolute;
+    top: 20px;
+    left: -6px;
+
+    ;
+}
+.nome_empresa{
+    font-size: 1.125rem;
+    line-height: 1.1;
+    font-weight: bold;
+}
+.funcoes_empresa{
+    font-size: 1.125rem;
+    line-height: 1.8;
+    font-weight: normal;
+}
+.empresa ul{
+    margin: 10px;
+    padding: 10px;
+    list-style-image: url(../Img/bolinha.svg)
+    ;
+}
+
+@media (max-width: 800px){
+    .experiencia{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .experiencia .subtitulo{
+        color: #141414;
+    }
+    .ano_empresa{
+        position: initial;
+        order: 1;
+        width: initial;
+        text-align: left;
+    }
+  
+}
+@media (max-width: 400px){
+    .empresa{
+        grid-template-columns: 1fr;
+    }
+    .ano_empresa{
+        order: inherit;
+    }
+    
+}

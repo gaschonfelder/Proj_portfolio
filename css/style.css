@@ -1,0 +1,7 @@
+@import './header.css';
+@import './global.css';
+@import 'introducao.css';
+@import 'exp.css';
+@import 'formacao.css';
+@import './projetos.css';
+@import "./footer.css"

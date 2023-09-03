@@ -1,0 +1,126 @@
+.introducao{
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    align-items: center;
+}
+.introducao h1{
+    font-size: 4.5rem;
+    line-height: 1.125;
+    margin-bottom: 30px;
+    position: relative;
+}
+.introducao h1::before{
+    content: "";
+    display: block;
+    width: 1000px;
+    height: 1000px;
+    background: url("../Img/Rectangle\ 28.svg") no-repeat center;
+    position: absolute;
+    z-index: -1;
+    top: -380px;
+    left: -305px;
+}
+.local{
+    font-size: 1.5rem;
+    color: #525252;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.lingaguens{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /*quebra caso diminua*/
+    justify-content: left;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.lingaguens li{
+    background-color: #e6e6e6;
+    border: 1px solid var(--c-4, #D1D1D1);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Turret Road", Arial, Helvetica, sans-serif;
+    color: black;
+}
+.lingaguens li:hover{
+    background: linear-gradient(94deg, #0E8E32 0%, #5FB934 100%);
+    color: white;
+}
+
+@media (max-width: 1152px){
+    .introducao h1::before{
+        content: "";
+        display: block;
+        width: 800px;
+        height: 800px;
+        background: url("../Img/Rectangle\ 28.svg") no-repeat center;
+        position: absolute;
+        z-index: -1;
+        top: -280px;
+        left: -230px;
+    }
+}
+
+@media (max-width: 1000px){
+    .introducao h1{
+        font-size: 3rem;
+    }
+.introducao h1::before{
+    content: "";
+    display: block;
+    width: 1000px;
+    height: 1000px;
+    background: url("../Img/detalhe\ respon.svg") no-repeat center;
+    position: absolute;
+    z-index: -1;
+    top: -360px;
+    left: -545px;
+}
+}
+    
+@media (max-width: 800px){
+    .introducao{
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .introducao h1{
+        font-size: 2rem;
+    }
+    .lingaguens{
+        gap: 10px;
+    }
+.introducao h1::before{
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100px;
+        background: url("../Img/detalhe\ respon\ 2.svg") no-repeat center;
+        position: absolute;
+        z-index: -1;
+        top: 3px;
+        left: -70px;
+    }
+    .introducao p{
+        font-size: 1rem;
+    }
+    .lingaguens{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 450px){
+    .introducao{
+        grid-template-columns: 1fr;
+    }
+    .foto{
+        display: none;
+    }
+}
+
